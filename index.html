@@ -22,6 +22,8 @@
             --dark-color: #2d3748;
             --text-color: #4a5568;
             --border-color: #e2e8f0;
+            --logo-brown: #8B4513;
+            --logo-gold: #D4AF37;
         }
 
         body {
@@ -122,18 +124,30 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .logo-text {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--logo-brown);
             text-decoration: none;
         }
 
-        .logo span {
-            color: var(--accent-color);
+        .logo-text span {
+            color: var(--logo-gold);
         }
 
         nav ul {
@@ -165,6 +179,34 @@
             cursor: pointer;
         }
 
+        /* Typing Animation */
+        .typing-container {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .typing-text {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            overflow: hidden;
+            border-right: 3px solid white;
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(44, 82, 130, 0.8)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
@@ -173,13 +215,17 @@
             color: white;
             text-align: center;
             padding: 180px 0 100px;
-            margin-top: 80px;
+            margin-top: 90px;
         }
 
         .hero h1 {
             color: white;
             margin-bottom: 20px;
             font-size: 3rem;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero p {
@@ -370,6 +416,18 @@
             padding: 60px 0 30px;
         }
 
+        .footer-top {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo-img {
+            height: 80px;
+            width: auto;
+            border-radius: 5px;
+        }
+
         .footer-content {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -422,6 +480,12 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 95%;
+            }
+        }
+
         @media (max-width: 992px) {
             .about-content,
             .services-grid,
@@ -442,6 +506,14 @@
             h2 {
                 font-size: 1.8rem;
             }
+            
+            .typing-text {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -461,6 +533,7 @@
             .hero-btns .btn {
                 margin-bottom: 10px;
                 width: 80%;
+                max-width: 300px;
             }
             
             .mobile-menu-btn {
@@ -469,7 +542,7 @@
             
             nav {
                 position: fixed;
-                top: 80px;
+                top: 90px;
                 left: 0;
                 width: 100%;
                 background-color: white;
@@ -494,6 +567,66 @@
             nav li {
                 margin: 0 0 15px 0;
             }
+            
+            .logo-img {
+                height: 50px;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            
+            .header-container {
+                padding: 10px 0;
+            }
+            
+            .hero {
+                margin-top: 70px;
+                padding: 120px 0 60px;
+            }
+            
+            .hero h1 {
+                min-height: 100px;
+            }
+            
+            .typing-text {
+                font-size: 1.8rem;
+                border-right: 2px solid white;
+            }
+            
+            .footer-logo-img {
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .typing-text {
+                font-size: 1.5rem;
+            }
+            
+            .hero h1 {
+                min-height: 80px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .footer-content {
+                gap: 30px;
+            }
+            
+            .logo-img {
+                height: 45px;
+            }
+            
+            .logo-text {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -501,7 +634,11 @@
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Molexi <span>Fortuna</span></a>
+            <div class="logo-container">
+                <img src="https://molexifortuna-98vlyeuda-an6vxqa1xh.edgeone.dev/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg" 
+                     alt="Molexi Fortuna Logo" class="logo-img">
+                <a href="#" class="logo-text">Molexi <span>Fortuna</span></a>
+            </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -520,7 +657,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Empowering Financial Awareness Through Research & Education</h1>
+            <div class="typing-container">
+                <h1 class="typing-text" id="typingText">Empowering Financial Awareness Through Research & Education</h1>
+            </div>
             <p>Learn with clarity. Understand financial markets responsibly. Molexi Fortuna Private Limited is a financial research and market education company committed to promoting responsible financial awareness.</p>
             <div class="hero-btns">
                 <a href="#services" class="btn">Explore Our Programs</a>
@@ -736,7 +875,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>info@molexifortuna.com</p>
+                            <p>molexifortuna@gmail.com</p>
                         </div>
                     </div>
                     
@@ -751,11 +890,11 @@
                 
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
-                    <form id="messageForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="tel" placeholder="Your Phone">
-                        <textarea placeholder="Your Message" required></textarea>
+                    <form id="messageForm" action="mailto:molexifortuna@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Your Phone">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
@@ -766,6 +905,11 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <div class="footer-top">
+                <img src="https://molexifortuna-98vlyeuda-an6vxqa1xh.edgeone.dev/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg" 
+                     alt="Molexi Fortuna Logo" class="footer-logo-img">
+            </div>
+            
             <div class="footer-content">
                 <div class="footer-column">
                     <a href="#" class="footer-logo">Molexi <span>Fortuna</span></a>
@@ -781,6 +925,15 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#why-choose">Why Choose Us</a></li>
                         <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Bhopal, Madhya Pradesh</li>
+                        <li><i class="fas fa-phone"></i> +91 90067 96244</li>
+                        <li><i class="fas fa-envelope"></i> molexifortuna@gmail.com</li>
                     </ul>
                 </div>
                 
@@ -822,12 +975,32 @@
             });
         });
         
+        // Typing animation
+        const typingText = document.getElementById('typingText');
+        const originalText = typingText.textContent;
+        
+        function resetTypingAnimation() {
+            typingText.textContent = '';
+            typingText.style.borderRight = '3px solid white';
+            typingText.style.animation = 'none';
+            
+            setTimeout(() => {
+                typingText.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
+                typingText.textContent = originalText;
+            }, 100);
+        }
+        
+        // Reset animation every 7 seconds
+        setInterval(resetTypingAnimation, 7000);
+        
         // Form submission
         const messageForm = document.getElementById('messageForm');
         messageForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message. We will get back to you soon.');
-            messageForm.reset();
+            // Allow form to submit to email
+            setTimeout(() => {
+                alert('Thank you for your message. We will get back to you soon.');
+                messageForm.reset();
+            }, 500);
         });
         
         // Smooth scrolling for anchor links
@@ -841,12 +1014,24 @@
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 90,
                         behavior: 'smooth'
                     });
                 }
             });
         });
+        
+        // Responsive adjustments
+        function adjustForMobile() {
+            if (window.innerWidth <= 768) {
+                typingText.style.borderRight = '2px solid white';
+            } else {
+                typingText.style.borderRight = '3px solid white';
+            }
+        }
+        
+        window.addEventListener('resize', adjustForMobile);
+        window.addEventListener('load', adjustForMobile);
     </script>
 </body>
 </html>
