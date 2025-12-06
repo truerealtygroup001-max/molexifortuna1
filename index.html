@@ -46,7 +46,7 @@
         }
 
         section {
-            padding: 100px 0;
+            padding: 25px 0;
             position: relative;
         }
 
@@ -654,14 +654,14 @@
 
         .disclaimer-box {
             background: #F8FAFC;
-            border-left: 6px solid #FF9800;
+            border-left: 6px solid #1B3E44;
             padding: 30px;
             color :  #ff0000ff;
             margin-top: 50px;
             border-radius: 10px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.1);
+            box-shadow: 0 10px 30px #1B3E44;
         }
 
         .disclaimer-box::before {
@@ -688,14 +688,14 @@
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 10px;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
             gap: 20px;
-            padding: 25px;
+            padding: 5px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -707,18 +707,37 @@
             box-shadow: 0 15px 35px rgba(212, 175, 55, 0.1);
         }
 
-        .contact-item i {
-            background: linear-gradient(135deg, var(--accent-gold), var(--logo-brown));
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
+        /* purana tha: .contact-item i { ... }  – isko change karo */
+.contact-item > i {
+    background: linear-gradient(135deg, var(--accent-gold), var(--logo-brown));
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.phone-line {
+    margin: 2px 0;              /* donon numbers ke beech ka gap kam */
+    display: flex;
+    align-items: center;
+    gap: 6px;                   /* icon aur number ke beech thoda space */
+    font-size: 1rem;
+}
+
+.phone-line i {
+    background: none;           /* yahan circle nahi chahiye */
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    font-size: 0.95rem;
+    color: var(--logo-brown);
+}
+
 
         .contact-form input,
         .contact-form textarea,
@@ -1194,7 +1213,7 @@
                 <ul>
                     <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-                    <li><a href="#services"><i class="fas fa-chart-line"></i> Services</a></li>
+                    <li><a href="#services"><i class="fas fa-chart-line"></i>Our Services</a></li>
                     <li><a href="#why-choose"><i class="fas fa-star"></i> Why Choose Us</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
@@ -1456,14 +1475,22 @@
                     </div>
                     
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 7771961981</p>
-                             <p>07554519981</p>
+    <i class="fas fa-phone"></i>
+    <div>
+        <h4>Phone</h4>
 
-                        </div>
-                    </div>
+        <p class="phone-line">
+            <i class="fas fa-phone-alt"></i>
+            +91 7771961981
+        </p>
+
+        <p class="phone-line">
+            <i class="fas fa-phone-alt"></i>
+            +91 7554519981
+        </p>
+    </div>
+</div>
+
                     
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -1543,7 +1570,7 @@
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i> Bhopal, Madhya Pradesh</li>
                     <li><i class="fas fa-phone"></i> +91 7771961981</li>
-                    <li><i class="fas fa-phone"></i> 07554519981</li>
+                    <li><i class="fas fa-phone"></i> +91 7554519981</li>
                     <li><i class="fas fa-envelope"></i> molexifortuna@gmail.com</li>
                     <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
                 </ul>
