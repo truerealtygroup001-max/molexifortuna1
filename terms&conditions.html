@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | Molexi Fortuna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === same core styling as index.html so header/footer match === */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #0A3D62;
+            --secondary-color: #1E5F8B;
+            --accent-color: #F5B041;
+            --accent-gold: #D4AF37;
+            --logo-brown: #8B4513;
+            --light-color: #F8F9FA;
+            --dark-color: #2C3E50;
+            --text-color: #34495E;
+            --border-color: #E2E8F0;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* ===== STOCK TICKER ===== */
+        .stock-ticker {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+            border-top: 3px solid var(--accent-gold);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .ticker-container {
+            display: flex;
+            animation: tickerScroll 40s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+
+        .ticker-symbol {
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .ticker-price {
+            margin-right: 20px;
+            font-size: 1.1rem;
+        }
+
+        .ticker-change {
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .ticker-change.positive {
+            background-color: rgba(39, 174, 96, 0.2);
+            color: #27AE60;
+        }
+
+        .ticker-change.negative {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: #E74C3C;
+        }
+
+        @keyframes tickerScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            border-radius: 8px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--logo-brown), var(--accent-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 35px;
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #143C46;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-gold), var(--logo-brown));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--logo-brown);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--logo-brown);
+            cursor: pointer;
+        }
+
+        /* ===== PAGE CONTENT ===== */
+        .page-wrapper {
+            padding-top: 130px;
+            padding-bottom: 60px;
+        }
+
+        .page-box {
+            max-width: 900px;
+            margin: 40px auto 0;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .page-box h1 {
+            font-size: 2.3rem;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #143C46;
+        }
+
+        .effective-date {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .page-box h3 {
+            margin-top: 25px;
+            margin-bottom: 8px;
+            color: var(--logo-brown);
+        }
+
+        .page-box p {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .page-box ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #143C46;
+            color: white;
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent-gold), var(--logo-brown));
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo-img {
+            height: 90px;
+            width: auto;
+            border-radius: 10px;
+            filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            display: block;
+            background: linear-gradient(45deg, white, var(--accent-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+
+        .footer-column h4 {
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-gold), transparent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 12px;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-gold);
+            transform: translateY(-4px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .container {
+                max-width: 95%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.5s ease;
+                z-index: 999;
+                border-radius: 0 0 20px 20px;
+            }
+
+            nav.active {
+                transform: translateX(0);
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 0 0 25px 0;
+            }
+
+            .logo-img {
+                height: 55px;
+            }
+
+            .logo-text {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .page-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- STOCK TICKER -->
+    <div class="stock-ticker">
+        <div class="ticker-container">
+            <div class="ticker-item">
+                <span class="ticker-symbol">NIFTY50</span>
+                <span class="ticker-price">₹22,415.80</span>
+                <span class="ticker-change positive">+0.85%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-symbol">SENSEX</span>
+                <span class="ticker-price">₹73,895.54</span>
+                <span class="ticker-change positive">+0.72%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-symbol">BANKNIFTY</span>
+                <span class="ticker-price">₹48,230.15</span>
+                <span class="ticker-change negative">-0.35%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-symbol">GOLD</span>
+                <span class="ticker-price">₹6,420/g</span>
+                <span class="ticker-change positive">+1.2%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-symbol">USD/INR</span>
+                <span class="ticker-price">₹83.45</span>
+                <span class="ticker-change positive">+0.15%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER (same as index) -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://ik.imagekit.io/digirank/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg"
+                    alt="Molexi Fortuna Logo" class="logo-img">
+                <a href="index.html#home" class="logo-text">Molexi Fortuna</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="index.html#services"><i class="fas fa-briefcase"></i> Our Services</a></li>
+                    <li><a href="index.html#why-choose"><i class="fas fa-star"></i> Why Choose Us</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="page-box">
+                <h1>Terms &amp; Conditions</h1>
+                <p class="effective-date"><b>Effective Date:</b> 8 December 2025</p>
+
+                <p>
+                    These Terms &amp; Conditions govern your use of the website
+                    <b>www.molexifortuna.com</b> (“Website”), operated by Molexi Fortuna Private Limited
+                    (“Company”, “we”, “our”, “us”). By accessing or using this Website, you agree to be bound by these Terms.
+                </p>
+
+                <h3>1. Eligibility</h3>
+                <p>
+                    You must be at least 18 years of age to use this Website and our educational services.
+                    By using this Website, you represent that you are legally competent to enter into a binding agreement.
+                </p>
+
+                <h3>2. Nature of Services</h3>
+                <p>
+                    Molexi Fortuna Private Limited provides <b>financial education, market awareness and research-based learning</b>.
+                    We are <b>not SEBI registered</b> and we do <b>not</b>:
+                </p>
+                <ul>
+                    <li>Provide investment, trading or financial advice</li>
+                    <li>Offer stock tips, calls or recommendations</li>
+                    <li>Provide portfolio management services</li>
+                    <li>Offer guaranteed returns or profit schemes</li>
+                </ul>
+                <p>
+                    All information shared through our Website, webinars, sessions or content is strictly for
+                    <b>educational and informational purposes only</b>.
+                </p>
+
+                <h3>3. User Responsibilities</h3>
+                <p>As a user, you agree to:</p>
+                <ul>
+                    <li>Use the Website only for lawful purposes</li>
+                    <li>Not copy, distribute or reproduce our content without prior written consent</li>
+                    <li>Not misrepresent our content as financial advice</li>
+                    <li>Not attempt to interfere with the security or operation of the Website</li>
+                </ul>
+
+                <h3>4. Intellectual Property Rights</h3>
+                <p>
+                    All content on this Website, including text, graphics, logos, icons, images,
+                    audio, video and design are the intellectual property of Molexi Fortuna Private Limited,
+                    unless otherwise stated. Unauthorized use of our intellectual property is strictly prohibited.
+                </p>
+
+                <h3>5. No Liability for Financial Decisions</h3>
+                <p>
+                    You understand and agree that any financial or investment decisions taken by you are based on
+                    your own judgment. We are not responsible or liable for:
+                </p>
+                <ul>
+                    <li>Any loss or damage (direct or indirect) arising from your financial decisions</li>
+                    <li>Market losses, trading losses or loss of capital</li>
+                    <li>Reliance placed on educational content provided by us</li>
+                </ul>
+
+                <h3>6. Fees and Payments</h3>
+                <p>
+                    If any of our programs, webinars or services are paid, the applicable fees will be clearly
+                    communicated to you before enrollment. Payments once made may be subject to our internal
+                    policies as applicable and as communicated at the time of registration.
+                </p>
+
+                <h3>7. Changes to the Website and Terms</h3>
+                <p>
+                    We reserve the right to modify, update or discontinue any part of the Website or these Terms
+                    at any time without prior notice. Continued use of the Website after such changes constitutes
+                    your acceptance of the revised Terms.
+                </p>
+
+                <h3>8. Third-Party Links</h3>
+                <p>
+                    Our Website may contain links to third-party websites. We are not responsible for the content,
+                    accuracy, or practices of any third-party websites. Accessing such links is at your own risk.
+                </p>
+
+                <h3>9. Governing Law and Jurisdiction</h3>
+                <p>
+                    These Terms &amp; Conditions are governed by and construed in accordance with the laws of India.
+                    Any dispute arising from or related to these Terms shall be subject to the exclusive jurisdiction
+                    of the courts at <b>Bhopal, Madhya Pradesh, India</b>.
+                </p>
+
+                <h3>10. Contact Us</h3>
+                <p>
+                    For any queries related to these Terms &amp; Conditions, you may contact us at:<br>
+                    <b>Email:</b> molexifortuna@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER (same as index, with legal links) -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <img src="https://ik.imagekit.io/digirank/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg"
+                    alt="Molexi Fortuna Logo" class="footer-logo-img">
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="index.html#home" class="footer-logo">Molexi Fortuna</a>
+                    <p>Empowering Financial Awareness Through Research & Education. We are committed to providing
+                        ethical, transparent, and research-based financial education to help individuals make informed
+                        decisions.</p>
+                    <p style="margin-top: 20px;"><strong><i class="fas fa-id-card"></i> CIN:</strong>
+                        U66190MP2025PTC077612</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="index.html#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="index.html#why-choose"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Bhopal, Madhya Pradesh</li>
+                        <li><i class="fa fa-mobile"></i> +91 7771961981</li>
+                        <li><i class="fas fa-phone"></i> +91 7554519981</li>
+                        <li><i class="fas fa-envelope"></i> molexifortuna@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-file-contract"></i> Privacy Policy</a></li>
+                        <li><a href="terms&conditions.html"><i class="fas fa-gavel"></i> Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li>
+                        <li><a href="compliance.html"><i class="fas fa-shield-alt"></i> Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Icons -->
+            <div style="text-align:center; margin:25px 0 10px;">
+                <a href="https://www.facebook.com/share/1LytNJXSGe/" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/molexifortuna?igsh=MWxzeWZvNDg4NHFzOA==" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/917771961981?text=I%20am%20interested%20in%20your%20service%20please"
+                    class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Molexi Fortuna Private Limited. All Rights Reserved.</p>
+                <p style="margin-top: 15px; font-size: 0.85rem;">
+                    Molexi Fortuna Private Limited is not a SEBI-registered advisory company and does not provide
+                    investment advice, stock tips, trading signals, portfolio management, or guaranteed returns. All
+                    website content is strictly for educational and informational purposes only. Users are solely
+                    responsible for their financial decisions.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script>
+        // mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        const navLinks = document.querySelectorAll('#mainNav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
