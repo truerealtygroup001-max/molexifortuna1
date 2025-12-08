@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +51,10 @@
             position: relative;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             color: #143C46;
             margin-bottom: 1.2rem;
             font-weight: 700;
@@ -122,7 +126,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: 0.5s;
         }
 
@@ -172,12 +176,15 @@
                 transform: translateY(100vh) translateX(0);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.5;
             }
+
             90% {
                 opacity: 0.5;
             }
+
             100% {
                 transform: translateY(-100px) translateX(50px);
                 opacity: 0;
@@ -189,15 +196,19 @@
                 height: 0;
                 opacity: 0;
             }
+
             10% {
                 opacity: 1;
             }
+
             50% {
                 height: 80px;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 height: 0;
                 opacity: 0;
@@ -234,6 +245,7 @@
             0% {
                 transform: scale(1);
             }
+
             100% {
                 transform: scale(1.05);
             }
@@ -335,13 +347,14 @@
 
         /* Hero Section with Advanced Typing Animation */
         .hero {
-            background: linear-gradient( #143C46, #143C46), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(#143C46, #143C46), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
             text-align: center;
-            padding: 200px 0 120px;
+            padding: 90px 0 70px;
+            /* top bottom reduced */
             position: relative;
             overflow: hidden;
         }
@@ -354,7 +367,7 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
         }
 
         .typing-container {
@@ -385,8 +398,16 @@
         }
 
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
         }
 
         .hero p {
@@ -527,8 +548,15 @@
         }
 
         @keyframes iconFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         /* Services Section */
@@ -599,14 +627,19 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
             transform: rotate(45deg);
             animation: shine 3s infinite;
         }
 
         @keyframes shine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
         }
 
         .service-content {
@@ -656,7 +689,7 @@
             background: #F8FAFC;
             border-left: 6px solid #1B3E44;
             padding: 30px;
-            color :  #ff0000ff;
+            color: #ff0000ff;
             margin-top: 50px;
             border-radius: 10px;
             position: relative;
@@ -665,7 +698,7 @@
         }
 
         .disclaimer-box::before {
-            
+
             position: absolute;
             top: 20px;
             right: 20px;
@@ -708,35 +741,38 @@
         }
 
         /* purana tha: .contact-item i { ... }  – isko change karo */
-.contact-item > i {
-    background: linear-gradient(135deg, var(--accent-gold), var(--logo-brown));
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    flex-shrink: 0;
-}
+        .contact-item>i {
+            background: linear-gradient(135deg, var(--accent-gold), var(--logo-brown));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
 
-.phone-line {
-    margin: 2px 0;              /* donon numbers ke beech ka gap kam */
-    display: flex;
-    align-items: center;
-    gap: 6px;                   /* icon aur number ke beech thoda space */
-    font-size: 1rem;
-}
+        .phone-line {
+            margin: 2px 0;
+            /* donon numbers ke beech ka gap kam */
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            /* icon aur number ke beech thoda space */
+            font-size: 1rem;
+        }
 
-.phone-line i {
-    background: none;           /* yahan circle nahi chahiye */
-    width: auto;
-    height: auto;
-    border-radius: 0;
-    font-size: 0.95rem;
-    color: var(--logo-brown);
-}
+        .phone-line i {
+            background: none;
+            /* yahan circle nahi chahiye */
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            font-size: 0.95rem;
+            color: var(--logo-brown);
+        }
 
 
         .contact-form input,
@@ -793,8 +829,15 @@
         }
 
         @keyframes chartGrow {
-            0% { width: 0; opacity: 0; }
-            100% { width: 100%; opacity: 1; }
+            0% {
+                width: 0;
+                opacity: 0;
+            }
+
+            100% {
+                width: 100%;
+                opacity: 1;
+            }
         }
 
         /* Footer */
@@ -831,8 +874,15 @@
         }
 
         @keyframes logoFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .footer-content {
@@ -933,7 +983,7 @@
         .stock-ticker {
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 15px 0;
+            padding: 10px 0;
             overflow: hidden;
             position: relative;
             border-top: 3px solid var(--accent-gold);
@@ -983,8 +1033,13 @@
         }
 
         @keyframes tickerScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         /* Responsive Design */
@@ -992,50 +1047,51 @@
             .container {
                 max-width: 95%;
             }
-            
+
             h1 {
                 font-size: 2.8rem;
             }
-            
+
             .typing-text {
                 font-size: 2.8rem;
             }
         }
 
         @media (max-width: 992px) {
+
             .about-content,
             .features-grid,
             .contact-container,
             .footer-content {
                 grid-template-columns: 1fr;
             }
-            
+
             .services-grid,
             .counter-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .typing-text {
                 font-size: 2.4rem;
             }
-            
+
             h1 {
                 font-size: 2.5rem;
             }
-            
+
             h2 {
                 font-size: 2rem;
             }
-            
+
             .hero {
-                padding: 180px 0 100px;
+                padding: 110px 0 60px;
             }
-            
+
             .hero-btns {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .hero-btns .btn {
                 margin-bottom: 20px;
                 width: 80%;
@@ -1044,16 +1100,17 @@
         }
 
         @media (max-width: 768px) {
+
             .services-grid,
             .counter-grid,
             .values-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             nav {
                 position: fixed;
                 top: 100px;
@@ -1067,49 +1124,51 @@
                 z-index: 999;
                 border-radius: 0 0 20px 20px;
             }
-            
+
             nav.active {
                 transform: translateX(0);
             }
-            
+
             nav ul {
                 flex-direction: column;
             }
-            
+
             nav li {
                 margin: 0 0 25px 0;
             }
-            
+
             .logo-img {
                 height: 55px;
             }
-            
+
             .logo-text {
                 font-size: 1.8rem;
             }
-            
+
             .header-container {
                 padding: 12px 0;
             }
-            
+
             .hero {
-                margin-top: 80px;
-                padding: 150px 0 80px;
+                margin-top: 0;
+                /* ✅ REMOVE EXTRA GAP */
+                padding: 85px 15px 50px;
+                /* ✅ PERFECT MOBILE HERO HEIGHT */
             }
-            
+
             .typing-text {
                 font-size: 2rem;
                 white-space: normal;
             }
-            
+
             .cursor {
                 display: none;
             }
-            
+
             .footer-logo-img {
                 height: 70px;
             }
-            
+
             section {
                 padding: 80px 0;
             }
@@ -1119,54 +1178,164 @@
             h1 {
                 font-size: 2rem;
             }
-            
+
             h2 {
                 font-size: 1.8rem;
             }
-            
+
             .typing-text {
                 font-size: 1.7rem;
             }
-            
+
             .hero {
-                padding: 130px 0 60px;
+                padding: 75px 15px 45px;
+                /* ✅ NO EXTRA WHITE SPACE */
             }
-            
+
             .container {
                 padding: 0 20px;
             }
-            
+
             .counter-value {
                 font-size: 2.8rem;
             }
-            
+
             .btn {
                 padding: 12px 30px;
                 font-size: 1rem;
             }
-            
+
             .logo-img {
                 height: 50px;
             }
-            
+
             .logo-text {
                 font-size: 1.6rem;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
         }
-        .head{
+
+        .head {
             color: #ffffffff;
+        }
+
+        @media (max-width: 576px) {
+            .feature-item {
+                flex-direction: row;
+                padding: 20px;
+                /* ✅ Smaller padding */
+                gap: 15px;
+                /* ✅ Tighter spacing */
+            }
+
+            .feature-icon {
+                width: 50px;
+                /* ✅ Smaller icon */
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            .feature-text h3 {
+                font-size: 1.1rem;
+                /* ✅ Smaller heading */
+                margin-bottom: 6px;
+            }
+
+            .feature-text p {
+                font-size: 0.95rem;
+                /* ✅ Better mobile text */
+                line-height: 1.5;
+            }
+        }
+
+        /* ✅ FIX CONTACT SECTION LAYOUT (ALL DEVICES) */
+
+        .contact-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info>p {
+            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* ✅ Contact card clean design */
+        .contact-item {
+            align-items: center;
+            /* vertical center */
+            padding: 18px 20px;
+            /* ✅ balanced padding */
+            gap: 15px;
+            /* ✅ tighter spacing */
+            border-radius: 14px;
+        }
+
+        /* ✅ Icon circle fix */
+        .contact-item>i {
+            width: 44px;
+            height: 44px;
+            font-size: 1.1rem;
+        }
+
+        /* ✅ Contact text fix */
+        .contact-item h4 {
+            margin-bottom: 5px;
+            font-size: 1.05rem;
+        }
+
+        .contact-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* ✅ Phone numbers alignment */
+        .phone-line {
+            font-size: 0.95rem;
+            gap: 8px;
+        }
+
+        .phone-line i {
+            font-size: 0.95rem;
+        }
+
+        /* ✅ MOBILE FIX */
+        @media (max-width: 576px) {
+            .contact-container {
+                gap: 35px;
+                /* ✅ reduce large gap */
+            }
+
+            .contact-item {
+                padding: 15px 16px;
+            }
+
+            .contact-item>i {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+            }
+
+            .contact-item h4 {
+                font-size: 1rem;
+            }
+
+            .contact-item p {
+                font-size: 0.92rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Stock Market Background Animation -->
     <!-- <div class="market-bg" id="marketBg"></div> -->
-    
+
     <!-- Stock Ticker -->
     <div class="stock-ticker">
         <div class="ticker-container">
@@ -1202,8 +1371,8 @@
     <header>
         <div class="container header-container">
             <div class="logo-container">
-                <img src="https://ik.imagekit.io/digirank/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg" 
-                     alt="Molexi Fortuna Logo" class="logo-img">
+                <img src="https://ik.imagekit.io/digirank/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg"
+                    alt="Molexi Fortuna Logo" class="logo-img">
                 <a href="#" class="logo-text">Molexi Fortuna</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1213,7 +1382,7 @@
                 <ul>
                     <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-                    <li><a href="#services"><i class="fas fa-chart-line"></i>Our Services</a></li>
+                    <li><a href="#services"><i class="fas fa-briefcase"></i> Our Services</a></li>
                     <li><a href="#why-choose"><i class="fas fa-star"></i> Why Choose Us</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
@@ -1225,14 +1394,15 @@
     <section class="hero" id="home">
         <div class="container">
             <!-- <div class="typing-container"> -->
-                <h1 class="head">Empowering Financial Awareness Through Research & Education</h1>
-                <!-- <span class="cursor"></span> -->
-            </div>
-            <p>Learn with clarity. Understand financial markets responsibly. Molexi Fortuna Private Limited is a financial research and market education company committed to promoting responsible financial awareness.</p>
-            <div class="hero-btns">
-                <a href="#services" class="btn"><i class="fas fa-chart-line"></i> Explore Our Programs</a>
-                <a href="#contact" class="btn btn-outline"><i class="fas fa-phone-alt"></i> Get In Touch</a>
-            </div>
+            <h1 class="head">Empowering Financial Awareness Through Research & Education</h1>
+            <!-- <span class="cursor"></span> -->
+        </div>
+        <p>Learn with clarity. Understand financial markets responsibly. Molexi Fortuna Private Limited is a financial
+            research and market education company committed to promoting responsible financial awareness.</p>
+        <div class="hero-btns">
+            <a href="#services" class="btn"><i class="fas fa-chart-line"></i> Explore Our Programs</a>
+            <a href="#contact" class="btn btn-outline"><i class="fas fa-phone-alt"></i> Get In Touch</a>
+        </div>
         </div>
     </section>
 
@@ -1266,15 +1436,20 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Who We Are</h2>
-                    <p>Molexi Fortuna is dedicated to simplifying financial learning and empowering individuals through ethical and unbiased information.</p>
-                    <p>Molexi Fortuna Private Limited is a registered financial research and market education company based in Bhopal, Madhya Pradesh. We focus on delivering responsible, unbiased, and research-oriented educational content that helps individuals develop financial awareness.</p>
-                    
+                    <p>Molexi Fortuna is dedicated to simplifying financial learning and empowering individuals through
+                        ethical and unbiased information.</p>
+                    <p>Molexi Fortuna Private Limited is a registered financial research and market education company
+                        based in Bhopal, Madhya Pradesh. We focus on delivering responsible, unbiased, and
+                        research-oriented educational content that helps individuals develop financial awareness.</p>
+
                     <h3>Our Purpose</h3>
-                    <p>To promote financial literacy and enable individuals to understand financial markets without dependency on speculative information.</p>
-                    
+                    <p>To promote financial literacy and enable individuals to understand financial markets without
+                        dependency on speculative information.</p>
+
                     <h3>Our Vision</h3>
-                    <p>To become a trusted source of financial education by supporting individuals in learning with transparency, accuracy, and responsibility.</p>
-                    
+                    <p>To become a trusted source of financial education by supporting individuals in learning with
+                        transparency, accuracy, and responsibility.</p>
+
                     <div class="values-grid">
                         <div class="value-item">
                             <i class="fas fa-graduation-cap"></i>
@@ -1284,7 +1459,8 @@
                         <div class="value-item">
                             <i class="fas fa-handshake"></i>
                             <h4>Integrity</h4>
-                            <p>We maintain the highest standards of honesty and transparency in all our communications.</p>
+                            <p>We maintain the highest standards of honesty and transparency in all our communications.
+                            </p>
                         </div>
                         <div class="value-item">
                             <i class="fas fa-eye"></i>
@@ -1299,7 +1475,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Financial Education">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                        alt="Financial Education">
                 </div>
             </div>
         </div>
@@ -1316,8 +1493,9 @@
     <section id="services" class="services">
         <div class="container">
             <h2>Services</h2>
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px;">Our educational programs are designed to build financial awareness without providing investment advice.</p>
-            
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px;">Our educational programs are designed
+                to build financial awareness without providing investment advice.</p>
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -1325,67 +1503,76 @@
                     </div>
                     <div class="service-content">
                         <h3>Market Awareness Programs</h3>
-                        <p>Introductory learning sessions designed to help individuals understand how financial markets function, including basic concepts, structures, and market behavior.</p>
+                        <p>Introductory learning sessions designed to help individuals understand how financial markets
+                            function, including basic concepts, structures, and market behavior.</p>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <div class="service-content">
                         <h3>Financial Research Insights</h3>
-                        <p>General market observations created from publicly available information to support awareness—not decision-making or trading.</p>
+                        <p>General market observations created from publicly available information to support
+                            awareness—not decision-making or trading.</p>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="service-content">
                         <h3>Risk Understanding & Management</h3>
-                        <p>Educational content focused on market volatility, risk exposure, and responsible financial understanding. This is not personalized risk advisory.</p>
+                        <p>Educational content focused on market volatility, risk exposure, and responsible financial
+                            understanding. This is not personalized risk advisory.</p>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-chart-pie"></i>
                     </div>
                     <div class="service-content">
                         <h3>Portfolio Understanding Workshops</h3>
-                        <p>Awareness-based learning on diversification principles, long-term planning ideas, and financial discipline. No personal portfolio guidance is provided.</p>
+                        <p>Awareness-based learning on diversification principles, long-term planning ideas, and
+                            financial discipline. No personal portfolio guidance is provided.</p>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-video"></i>
                     </div>
                     <div class="service-content">
                         <h3>Educational Webinars & Seminars</h3>
-                        <p>Regular sessions covering market basics, investor psychology, economic factors, and market functioning.</p>
+                        <p>Regular sessions covering market basics, investor psychology, economic factors, and market
+                            functioning.</p>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-book"></i>
                     </div>
                     <div class="service-content">
                         <h3>Financial Literacy Resources</h3>
-                        <p>Comprehensive educational materials, guides, and tools to enhance your understanding of financial markets and concepts.</p>
+                        <p>Comprehensive educational materials, guides, and tools to enhance your understanding of
+                            financial markets and concepts.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="disclaimer-box">
-   <p class="text-blue-600 font-semibold">
-    <strong>Important Notice:</strong> 
-    All our offerings are strictly educational. We do not provide investment advice or trading recommendations. 
-     Molexi Fortuna Private Limited is not SEBI registered and does not provide investment or trading advice.
-</p>            </div>
+                <p class="text-blue-600 font-semibold">
+                    <strong>Important Notice:</strong>
+                    All our offerings are strictly educational. We do not provide investment advice or trading
+                    recommendations.
+                    Molexi Fortuna Private Limited is not SEBI registered and does not provide investment or trading
+                    advice.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -1393,8 +1580,9 @@
     <section id="why-choose">
         <div class="container">
             <h2>Why Choose Us</h2>
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px;">We differentiate ourselves through our commitment to ethical, transparent financial education.</p>
-            
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px;">We differentiate ourselves through our
+                commitment to ethical, transparent financial education.</p>
+
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">
@@ -1402,44 +1590,51 @@
                     </div>
                     <div class="feature-text">
                         <h3>Transparent and Responsible</h3>
-                        <p>We maintain complete transparency in all our communications and educational materials, ensuring you receive honest information.</p>
+                        <p>We maintain complete transparency in all our communications and educational materials,
+                            ensuring you receive honest information.</p>
                     </div>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-ban"></i>
                     </div>
                     <div class="feature-text">
                         <h3>No Misleading Promises</h3>
-                        <p>We do not make unrealistic claims or promises about financial outcomes. Our focus is solely on education.</p>
+                        <p>We do not make unrealistic claims or promises about financial outcomes. Our focus is solely
+                            on education.</p>
                     </div>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <div class="feature-text">
                         <h3>Research-Informed Content</h3>
-                        <p>All our educational materials are based on thorough research and analysis, not speculation or market predictions.</p>
+                        <p>All our educational materials are based on thorough research and analysis, not speculation or
+                            market predictions.</p>
                     </div>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-award"></i>
                     </div>
                     <div class="feature-text">
                         <h3>Ethical and Compliant Approach</h3>
-                        <p>We adhere to the highest ethical standards in financial education and maintain full compliance with regulations.</p>
+                        <p>We adhere to the highest ethical standards in financial education and maintain full
+                            compliance with regulations.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="disclaimer-box" style="margin-top: 60px;">
                 <h3>What We DO NOT Provide</h3>
-                <p><font color="#234545">To maintain complete transparency, we want to be clear about services we do not offer.</p>
+                <p>
+                    <font color="#234545">To maintain complete transparency, we want to be clear about services we do
+                        not offer.
+                </p>
                 <ul style="margin-top: 20px; columns: 2;">
                     <li><i class="fas fa-times-circle"></i> Stock recommendations or tips</li>
                     <li><i class="fas fa-times-circle"></i> Intraday or positional trading calls</li>
@@ -1447,7 +1642,8 @@
                     <li><i class="fas fa-times-circle"></i> Guaranteed profits or returns</li>
                     <li><i class="fas fa-times-circle"></i> SEBI-regulated advisory services</li>
                     <li><i class="fas fa-times-circle"></i> Portfolio management services</li>
-    </font></ul>
+                    </font>
+                </ul>
             </div>
         </div>
     </section>
@@ -1456,67 +1652,70 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px;">Get in touch with us to learn more about our educational programs</p>
-            
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 50px;">Get in touch with us to learn more
+                about our educational programs</p>
+
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
-                    <p>For general inquiries related to our educational and research-based offerings, contact us using the details below:</p>
-                    
+                    <p>For general inquiries related to our educational and research-based offerings, contact us using
+                        the details below:</p>
+
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         <div>
                             <h4>Address</h4>
-                            <p>Molexi Fortuna Private Limited<br>
-                            FF 5-B, First Floor, Mansarover Complex,<br>
-                            Shivaji Nagar (Bhopal), Huzur,<br>
-                            Bhopal – 462016, Madhya Pradesh, India</p>
+                            <p>Molexi Fortuna Private Limited
+                                FF 5-B, First Floor, Mansarover Complex,
+                                Shivaji Nagar (Bhopal), Huzur,<br>
+                                Bhopal – 462016, Madhya Pradesh, India
+                            </p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
-    <i class="fas fa-phone"></i>
-    <div>
-        <h4>Phone</h4>
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div>
+                            <h4>Phone</h4>
 
-        <p class="phone-line">
-            <i class="fas fa-phone-alt"></i>
-            +91 7771961981
-        </p>
+                            <p class="phone-line">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                +91 7771961981
+                            </p>
 
-        <p class="phone-line">
-            <i class="fas fa-phone-alt"></i>
-            +91 7554519981
-        </p>
-    </div>
-</div>
+                            <p class="phone-line">
+                                <i class="fa-solid fa-phone"></i>
+                                +91 7554519981
+                            </p>
+                        </div>
+                    </div>
 
-                    
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fa-solid fa-envelope-open-text"></i>
                         <div>
                             <h4>Email</h4>
                             <p>molexifortuna@gmail.com</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
-                        <i class="fas fa-clock"></i>
+                        <i class="fa-solid fa-clock-rotate-left"></i>
                         <div>
                             <h4>Response Time</h4>
                             <p>Our team responds within 24 working hours.</p>
                         </div>
                     </div>
-                    
-                    <div class="social-links">
+
+
+                    <!-- <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    </div> -->
                 </div>
-                
+
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
                     <form id="messageForm" action="mailto:molexifortuna@gmail.com" method="post" enctype="text/plain">
@@ -1540,101 +1739,118 @@
     </section>
 
     <!-- Footer -->
-   <footer>
-    <div class="container">
-        <div class="footer-top">
-            <img src="https://ik.imagekit.io/digirank/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg" 
-                 alt="Molexi Fortuna Logo" class="footer-logo-img">
-        </div>
-
-        <div class="footer-content">
-            <div class="footer-column">
-                <a href="#" class="footer-logo">Molexi Fortuna</a>
-                <p>Empowering Financial Awareness Through Research & Education. We are committed to providing ethical, transparent, and research-based financial education to help individuals make informed decisions.</p>
-                <p style="margin-top: 20px;"><strong><i class="fas fa-id-card"></i> CIN:</strong> U66190MP2025PTC077612</p>
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <img src="https://ik.imagekit.io/digirank/WhatsApp%20Image%202025-11-26%20at%206.26.43%20PM.jpeg"
+                    alt="Molexi Fortuna Logo" class="footer-logo-img">
             </div>
 
-            <div class="footer-column">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    <li><a href="#why-choose"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
-                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                </ul>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">Molexi Fortuna</a>
+                    <p>Empowering Financial Awareness Through Research & Education. We are committed to providing
+                        ethical, transparent, and research-based financial education to help individuals make informed
+                        decisions.</p>
+                    <p style="margin-top: 20px;"><strong><i class="fas fa-id-card"></i> CIN:</strong>
+                        U66190MP2025PTC077612</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#why-choose"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Bhopal, Madhya Pradesh</li>
+                        <li><i class="fa fa-mobile"></i> +91 7771961981</li>
+                        <li><i class="fas fa-phone"></i> +91 7554519981</li>
+                        <li><i class="fas fa-envelope"></i> molexifortuna@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-gavel"></i> Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Compliance</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-column">
-                <h4>Contact Info</h4>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Bhopal, Madhya Pradesh</li>
-                    <li><i class="fas fa-phone"></i> +91 7771961981</li>
-                    <li><i class="fas fa-phone"></i> +91 7554519981</li>
-                    <li><i class="fas fa-envelope"></i> molexifortuna@gmail.com</li>
-                    <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
-                </ul>
+            <!-- 🌐 Social Icons Added Here -->
+            <div style="text-align:center; margin:25px 0 10px;">
+    
+    <a href="https://www.facebook.com/share/1LytNJXSGe/"
+       style="color:#ffffff; font-size:28px; margin:0 12px; text-decoration:none;
+              text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/molexifortuna?igsh=MWxzeWZvNDg4NHFzOA=="
+       style="color:#ffffff; font-size:28px; margin:0 12px; text-decoration:none;
+              text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/917771961981?text=I%20am%20interested%20in%20your%20service%20please"
+       style="color:#ffffff; font-size:28px; margin:0 12px; text-decoration:none;
+              text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+            <!-- End Social Icons -->
+
+            <div class="copyright">
+                <p>© 2025 Molexi Fortuna Private Limited. All Rights Reserved.</p>
+                <p style="margin-top: 15px; font-size: 0.85rem;">
+                    Molexi Fortuna Private Limited is not a SEBI-registered advisory company and does not provide
+                    investment advice, stock tips, trading signals, portfolio management, or guaranteed returns. All
+                    website content is strictly for educational and informational purposes only. Users are solely
+                    responsible for their financial decisions.
+                </p>
             </div>
-
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#"><i class="fas fa-file-contract"></i> Privacy Policy</a></li>
-                    <li><a href="#"><i class="fas fa-gavel"></i> Terms & Conditions</a></li>
-                    <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li>
-                    <li><a href="#"><i class="fas fa-shield-alt"></i> Compliance</a></li>
-                </ul>
-            </div>
         </div>
+    </footer>
 
-        <!-- 🌐 Social Icons Added Here -->
-        <div style="text-align:center; margin:25px 0 10px;">
-            <a href="https://www.facebook.com/share/1LytNJXSGe/" style="color: #ffffffff; font-size:28px; margin:0 12px;">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/molexifortuna?igsh=MWxzeWZvNDg4NHFzOA==" style="color: #ffffffff; font-size:28px; margin:0 12px;">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/917771961981?text=I%20am%20interested%20in%20your%20service%20please" style="color: #ffffffff; font-size:28px; margin:0 12px;">
-                  <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-        <!-- End Social Icons -->
-
-        <div class="copyright">
-            <p>© 2025 Molexi Fortuna Private Limited. All Rights Reserved.</p>
-            <p style="margin-top: 15px; font-size: 0.85rem;">
-                Molexi Fortuna Private Limited is not a SEBI-registered advisory company and does not provide investment advice, stock tips, trading signals, portfolio management, or guaranteed returns. All website content is strictly for educational and informational purposes only. Users are solely responsible for their financial decisions.
-            </p>
-        </div>
-    </div>
-</footer>
-
-<!-- FontAwesome Icons -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- FontAwesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
     <script>
         // Create dynamic stock market background
         function createMarketBackground() {
             const marketBg = document.getElementById('marketBg');
             const chartCount = 30;
-            
-            for(let i = 0; i < chartCount; i++) {
+
+            for (let i = 0; i < chartCount; i++) {
                 const chartLine = document.createElement('div');
                 chartLine.className = Math.random() > 0.5 ? 'chart-line' : 'chart-bar';
-                
+
                 // Random positioning
                 chartLine.style.left = Math.random() * 100 + '%';
                 chartLine.style.top = Math.random() * 100 + '%';
-                
+
                 // Random animation delay
                 chartLine.style.animationDelay = Math.random() * 20 + 's';
-                
+
                 // Random size for bars
-                if(chartLine.className === 'chart-bar') {
+                if (chartLine.className === 'chart-bar') {
                     chartLine.style.height = Math.random() * 100 + 50 + 'px';
                 }
-                
+
                 marketBg.appendChild(chartLine);
             }
         }
@@ -1654,7 +1870,7 @@
 
         function typeText() {
             const currentText = texts[textIndex];
-            
+
             if (isDeleting) {
                 typingText.textContent = currentText.substring(0, charIndex - 1);
                 charIndex--;
@@ -1664,7 +1880,7 @@
                 charIndex++;
                 typingSpeed = 100;
             }
-            
+
             if (!isDeleting && charIndex === currentText.length) {
                 isDeleting = true;
                 typingSpeed = 1500; // Pause at end
@@ -1673,7 +1889,7 @@
                 textIndex = (textIndex + 1) % texts.length;
                 typingSpeed = 500; // Pause before next text
             }
-            
+
             setTimeout(typeText, typingSpeed);
         }
 
@@ -1681,12 +1897,12 @@
         function animateCounter() {
             const counters = document.querySelectorAll('.counter-value');
             const speed = 200;
-            
+
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-count');
                 const increment = target / speed;
                 let current = 0;
-                
+
                 const updateCounter = () => {
                     if (current < target) {
                         current += increment;
@@ -1696,7 +1912,7 @@
                         counter.textContent = target;
                     }
                 };
-                
+
                 updateCounter();
             });
         }
@@ -1704,14 +1920,14 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mainNav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
                 : '<i class="fas fa-bars"></i>';
         });
-        
+
         // Close mobile menu when clicking a link
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
@@ -1720,7 +1936,7 @@
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
-        
+
         // Form submission
         const messageForm = document.getElementById('messageForm');
         messageForm.addEventListener('submit', (e) => {
@@ -1730,17 +1946,17 @@
                 messageForm.reset();
             }, 500);
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
@@ -1748,19 +1964,19 @@
                 }
             });
         });
-        
+
         // Initialize everything when page loads
         window.addEventListener('load', () => {
             createMarketBackground();
             typeText();
-            
+
             // Start counter animation when in view
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
                 threshold: 0.3
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1769,7 +1985,7 @@
                     }
                 });
             }, observerOptions);
-            
+
             const counterSection = document.querySelector('.counter-section');
             if (counterSection) observer.observe(counterSection);
         });
@@ -1780,7 +1996,7 @@
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-15px) scale(1.03)';
             });
-            
+
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'translateY(0) scale(1)';
             });
@@ -1796,4 +2012,5 @@
         });
     </script>
 </body>
+
 </html>
